@@ -41,7 +41,7 @@ const ICON_MAP: Record<string, any> = {
 
 export default function Progress() {
   const { state } = useStore();
-  const { profile, badges } = state;
+  const { profile, badges, settings } = state;
   const levelInfo = computeLevel(profile.xp);
 
   const unlocked = badges.filter((b) => b.unlockedAt);
@@ -57,10 +57,16 @@ export default function Progress() {
 
         {/* Level card */}
         <LinearGradient
-          colors={['#1B1530', '#101B33']}
+          colors={settings.darkMode ? ['#1B1530', '#101B33'] : ['#FFFFFF', '#F3F4FA']}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          style={{ borderRadius: 24, padding: 20, marginBottom: 20 }}
+          style={{
+            borderRadius: 24,
+            padding: 20,
+            marginBottom: 20,
+            borderWidth: settings.darkMode ? 0 : 1,
+            borderColor: '#E7E6F0',
+          }}
         >
           <View className="flex-row items-center justify-between mb-4">
             <View className="flex-row items-center gap-3">

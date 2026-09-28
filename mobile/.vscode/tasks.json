@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Expo Web Dev Server (8081)",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"expo",
+				"start",
+				"--web",
+				"--port",
+				"8081"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "start",
+			"type": "shell",
+			"command": "npx expo start --web --port 8081",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "FocusForge Mobile Web",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"npm run web -- --port 8081"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

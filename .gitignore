@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Expo and generated build output
+.expo/
+**/.expo/
+web-build/
+dist/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Legacy and optional workspaces excluded from the hackathon submission
+/focusforge/
+/api/
+/supabase/
+/web/
+
+# Empty template metadata and root lockfile (dependencies live in mobile/)
+/orchd.json
+/rapidnative.json
+/package-lock.json
+
+# RapidNative preview artifacts and editor-only notes
+/mobile/claude.md
+/mobile/src/index.tsx
+/mobile/src/__expo_ctx.js
+/mobile/src/2859cbda-56c5-43b5-8235-746643c20816
+/mobile/src/f0f80185-d119-4c5c-a678-efdbb92112c2
+
+# Logs and OS-generated files
+npm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db

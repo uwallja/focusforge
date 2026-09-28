@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start FocusForge Web",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"cd /d mobile && npm run web -- --port 8081"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
